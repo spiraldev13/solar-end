@@ -1,0 +1,47 @@
+////////////////////////////////////////////////////////////////
+// Section_3
+////////////////////////////////////////////////////////////////
+
+.section_3_wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color_blue;
+  @include breakpoint(tablet){
+    height: calc(100% - 10em);
+  }
+}
+
+.wrap_content_text{
+  display: inline-flex;
+  vertical-align: middle;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2em;
+}
+
+.content_text{
+  width: 50%;
+  color: $color_white;
+}
+
+.content_text img{
+  width: 5em;
+  display: block;
+  margin: 0 auto;
+  padding-bottom: 1em;
+}
+
+.content_text h3{
+  color: $color_yellow;
+  font-size: 1em;
+  padding: 0em 1em 1em 1em;
+  text-align: center;
+}
+
+.content_text p{
+  width: 100%;
+  padding: 0em 1em 1em 1em;
+  font-size: 0.8em;
+  text-align: center;
+}

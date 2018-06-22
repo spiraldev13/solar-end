@@ -1,0 +1,70 @@
+///////////////////////////////////////////////
+///////////////   SECTION_2   /////////////////
+///////////////////////////////////////////////
+
+.carousel_wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  height: calc(100% - 10em);
+}
+
+.carousel_wrap_content{
+  @include breakpoint(laptop){
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    @include breakpoint(desktopF){
+      margin-top: 12em;
+
+    }
+  }
+}
+
+.carousel{
+  clear: both;
+  min-height: auto;
+}
+
+.carousel_img{
+  width: 25% !important;
+  margin: 0 auto;
+  padding-top: 3em;
+    @include breakpoint(tablet){
+      width: 50% !important;
+      @include breakpoint(laptop){
+        width: 70% !important;
+        @include breakpoint(desktop){
+          width: 110% !important;
+      }
+    }
+  }
+}
+
+.section2_content_totem h3{
+  font-size: 1.3em;
+  color: $color_blue;
+  text-align: center;
+  padding-top: 3em;
+    @include breakpoint(desktop){
+      font-size: 1.5em;
+  }
+}
+
+.section2_content_text{
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  font-size: 0.8em;
+  margin-top: 3em;
+    @include breakpoint(desktop){
+      margin: 0;
+      width: 30%;
+    }
+}
+
+.section2_content_text strong{
+  text-transform: uppercase;
+}

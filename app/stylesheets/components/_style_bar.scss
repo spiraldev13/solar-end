@@ -1,0 +1,136 @@
+////////////////////////////////////////
+///// Toute Section
+////////////////////////////////////////
+
+.style_bar{
+  box-sizing: content-box;
+  position: relative;
+  background-color: $color_white;
+  width: 55vw;
+  height: 6em;
+  margin-left: -1em;
+  border-width: medium;
+  transform: rotateZ(-4deg) translateY(-30%);
+    @include breakpoint(tablet){
+      height: 9em;
+      @include breakpoint(laptop){
+        height: 10em;
+          @include breakpoint(desktopF){
+            height: 11em;
+        }
+      }
+    }
+  }
+
+
+.title_bar{
+  color: $color_yellow;
+  float: right;
+  font-size: 1.2em;
+  margin-top: 60px;
+  margin-right: 9px;
+    @include breakpoint(tablet){
+      margin-top: 90px;
+      font-size: 2em;
+      margin-right: 15px;
+        @include breakpoint(laptop){
+          margin-top: 110px;
+          margin-right: 20px;
+          @include breakpoint(desktopF){
+            margin-top: 130px;
+      }
+    }
+  }
+}
+
+////////////////////////////////////////
+///// Section Service
+////////////////////////////////////////
+
+.services4{
+  box-sizing: content-box;
+  width: 75%;
+  text-align: center;
+  margin: 3em auto 3em;
+  height: 3em;
+  line-height: 3.5em;
+  background-color: $color_yellow;
+  right: 0;
+  font-size: 0.8em;
+    @include breakpoint(tablet){
+      margin: 1em auto;
+        @include breakpoint(laptop){
+          margin: 3em auto;
+            @include breakpoint(desktop){
+              position: relative;
+              text-align: left;
+              width: 50%;
+              height: 0.5em;
+              margin-bottom: 10em;
+              margin-right: -7em;
+              padding: 3em;
+              transform: rotate(8deg) translateY(80px);
+
+        }
+    }
+}
+
+.services_title{
+  color: $color_white;
+  display: inline-block;
+  margin: 0 auto;
+  font-size: 1.5em;
+  font-weight: 600;
+    @include breakpoint(desktop){
+      position: absolute;
+      transform: translateY(-15px);
+      font-size: 2.3em;
+    }
+  }
+}
+
+////////////////////////////
+// Section_2
+///////////////////////////
+
+.bar_carousel{
+  background-color: $color_blue !important;
+}
+
+.title_carousel{
+  color: $color_white;
+}
+
+////////////////////////////
+// Section_4
+///////////////////////////
+
+.style_4{
+  background-color: $color_yellow !important;
+}
+
+.title_4{
+  color: $color_white;
+}
+
+////////////////////////////
+// Section_5
+///////////////////////////
+
+.style_bar_galery{
+  background-color: $color_blue;
+}
+
+.title_galery{
+  color: $color_white;
+}
+
+////////////////////////////
+// Footer
+///////////////////////////
+.style_footer{
+  background-color: $color_white !important;
+  .footer_title{
+    color: $color_yellow !important;
+  }
+}

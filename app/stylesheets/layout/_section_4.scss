@@ -1,0 +1,192 @@
+///////////////////////////////////////////////
+///////////////   SECTION_4   /////////////////
+///////////////////////////////////////////////
+
+.section4_wrap_ico{
+  @include breakpoint(tablet){
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    height: calc(100% - 10em);
+          @include breakpoint(desktop){
+            height: calc(100% - 15em);
+    }
+  }
+}
+
+//////////////////////////////////
+// Section Numbers
+//////////////////////////////////
+
+.section4_wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section4_list {
+  width: 90%;
+  margin: 0 auto;
+  counter-reset: step;
+    @include breakpoint(tablet){
+      display: flex;
+      flex-wrap: wrap;
+  }
+}
+
+.section4_list li {
+  list-style-type: none;
+  color: $color_blue;
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+    @include breakpoint(tablet){
+      width: 40%;
+      font-size: 0.9em;
+        @include breakpoint(laptop){
+          width: 20%;
+          @include breakpoint(desktop){
+            font-size: 0.7em;
+      }
+    }
+  }
+}
+
+.section4_list li:before {
+  content:counter(step);
+  font-family: 'Arial', sans-serif;
+  counter-increment: step;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: block;
+  text-align: center;
+  margin: 1em auto 10px auto;
+  border-radius: 50%;
+  background-color: $color_yellow;
+  font-size: 1.5em;
+    @include breakpoint(tablet){
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      font-size: 2em;
+        @include breakpoint(laptop){
+          font-size: 2.5em;
+            @include breakpoint(desktopF){
+              width: 85px;
+              height: 85px;
+              line-height: 85px;
+    }
+   }
+ }
+}
+
+.section4_list li:after {
+  @include breakpoint(laptop){
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 5px;
+    background-color: $color_yellow;
+    top: 38%;
+    left: -70%;
+    z-index: -1;
+      @include breakpoint(desktopF){
+        top: calc(50% - 5px);
+        width: 120%;
+    }
+  }
+}
+
+.section4_list li:first-child:after {
+  content: none;
+}
+
+
+.section4_wrap_services{
+  @include breakpoint(tablet){
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    @include breakpoint(laptop){
+      flex-wrap: nowrap;
+        @include breakpoint(desktop){
+      }
+    }
+  }
+}
+
+.section4_ico{
+  max-width: 80%;
+  margin: 0.5em auto 0;
+  text-align: center;
+  @include breakpoint(tablet){
+    width: 50%;
+    @include breakpoint(laptop){
+    }
+  }
+}
+
+.section4_ico img{
+  display: block;
+  width: 25%;
+  margin: 0 auto 1em;
+    @include breakpoint(tablet){
+      width: 20%;
+        @include breakpoint(laptop){
+          width: 20%
+    }
+  }
+}
+
+.section4_ico h3{
+  color: $color_yellow;
+    @include breakpoint(tablet){
+      font-size: 1.2em;
+        @include breakpoint(laptop){
+          font-size: 1.4em;
+    }
+  }
+}
+
+.section4_ico p{
+  margin: 0 auto;
+  width: 95%;
+  color: $color_blue;
+  padding-bottom: 1.5em;
+  line-height: 17px;
+    @include breakpoint(tablet){
+      font-size: 0.9em;
+      @include breakpoint(laptop){
+        font-size: 0.9em;
+          @include breakpoint(desktop){
+            font-size: 0.8em;
+            margin-top: 1.2em;
+      }
+    }
+  }
+}
+
+.section_content_list_text2::before{
+  content: '.';
+  color: $color_yellow;
+  vertical-align: text-bottom;
+  font-weight: bolder;
+  padding-right: 0.5em;
+}
+
+.section_content_list_text2{
+  list-style: none;
+  color: $color_blue;
+  line-height: 17px;
+    @include breakpoint(tablet){
+      font-size: 0.9em;
+        @include breakpoint(desktop){
+          font-size: 0.8em;
+    }
+  }
+}

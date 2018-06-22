@@ -1,0 +1,232 @@
+
+
+
+
+.footer_wrap_flex{
+  @include breakpoint(laptop){
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+      @include breakpoint(desktop){
+        padding: 0;
+    }
+  }
+}
+
+.footer_content_flex{
+  @include breakpoint(laptop){
+    width: 40%;
+    margin: 0 auto;
+  }
+}
+
+.footer_logo{
+  width: 80%;
+  margin: 0 auto;
+  transition: 0.5s;
+  @include breakpoint(tablet){
+    width: 50%;
+    @include breakpoint(laptop){
+    width: 40%;
+    }
+  }
+}
+
+.footer_adress{
+  width: 80%;
+  margin: 4em auto;
+  text-align: center;
+}
+
+.footer_adress h3{
+  color: $color_yellow;
+}
+
+.footer_adress a{
+  color: $color_white;
+}
+
+.footer_adress p{
+  color: $color_white;
+  line-height: 1em;
+  padding-top: 1em;
+}
+
+.footer_title_form{
+  color: $color_yellow;
+  font-size: 1.5em;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 1em;
+}
+
+.footer_form{
+  width: 70%;
+  color: $color_white;
+  font-weight: 600;
+  margin: 0 auto;
+  text-align: center;
+  transition: 0.5s;
+    @include breakpoint(tablet){
+      width: 50%;
+        @include breakpoint(laptop){
+          display: flex;
+          flex-wrap: wrap;
+          width: 80%;
+    }
+  }
+}
+
+.footer_wrap_info{
+  @include breakpoint(laptop){
+    width: calc(50% - 10px);
+    padding-right: 1em;
+  }
+}
+
+.footer_button{
+  width: 100%;
+  display: flex;
+    @include breakpoint(laptop){
+      width: calc(100% - 37px);
+  }
+}
+
+.footer_button button{
+  background-color: $color_yellow;
+  color: $color_blue;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: none;
+  padding: 0.4em 1em;
+}
+
+.footer_form label{
+  margin: 1em auto 0;
+  display: block;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.footer_form input{
+  width: 100%;
+  text-align: center;
+  margin: 0 auto;
+  border: none;
+}
+
+.footer_form span{
+  color: #db4e45;
+}
+
+.textarea{
+  margin-bottom: -7px;
+  @include breakpoint(laptop){
+  width: calc(100% - 20px);
+  }
+}
+
+textarea{
+  width: 100%;
+  border: none;
+}
+
+.footer_bottom{
+  width: 90%;
+  text-align: center;
+  margin: 2em auto 1em;
+    @include breakpoint(laptop){
+      width: 20%;
+  }
+}
+
+.footer_copyright{
+  color: $color_white;
+  font-weight: 600;
+  font-size: 0.7em;
+    @include breakpoint(laptop){
+      font-size: 0.8em;
+        @include breakpoint(desktop){
+          font-size: 0.6em;
+    }
+  }
+}
+
+.barrejaune{
+  @include breakpoint(laptop){
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    margin-top: 2em;
+  }
+}
+
+.footer_copyright a{
+  color: $color_yellow;
+  text-decoration: none;
+
+}
+
+.footer_copyright a:hover{
+  color: $color_yellow_hov;
+}
+
+
+.et{
+  text-transform: uppercase;
+}
+
+////////////////////////////////////////////////////
+///////Return TOP BUTTON
+////////////////////////////////////////////////////
+
+a#cRetour{
+  @include breakpoint(laptop){
+    border-radius:3px;
+    padding: 6px 10px ;
+    font-size:20px;
+    text-align:center;
+    color:$color_blue;
+    background:$color_yellow;
+    position:fixed;
+    right:15px;
+    opacity:1;
+    z-index:99999;
+    box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.5);
+    transition:all ease-in 0.2s;
+    backface-visibility: hidden;
+    text-decoration: none;
+      @include breakpoint(desktop){
+        right: 30px;
+          @include breakpoint(desktopF){
+            right: 2vw;
+      }
+    }
+  }
+}
+
+// a#cRetour:before{ content: "\;"; }
+a#cRetour:hover{
+  @include breakpoint(laptop){
+    background:$color_white;
+    transition:all ease-in 0.2s;
+  }
+}
+
+a#cRetour.cInvisible{
+@include breakpoint(laptop){
+  bottom:-35px;
+  opacity:0;
+  transition:all ease-in 0.5s;
+  }
+}
+
+a#cRetour.cVisible{
+  @include breakpoint(laptop){
+    bottom:30px;
+    opacity:1;
+
+  }
+}
